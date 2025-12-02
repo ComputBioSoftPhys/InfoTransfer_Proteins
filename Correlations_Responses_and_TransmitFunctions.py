@@ -65,7 +65,7 @@ JSd_e[JSd_e == 0] = 1
 
 TF_s2e = JCd / JSd_e # sensor-to-effector force transfer
 TF_e2s = JCd / JSd_s # effector-to-sensor force transfer
-np.savetxt('ForceTransmitFunction_real-part_MolFixCoord_Paxes.txt', list(zip(fs, TF_s2e.real, TF_s2e.imag, TF_e2s.real, TF_e2s.imag)), fmt='%.12f', header='<Freq.(1/ps)>  <Re_TF_s2e>  <Im_TF_s2e>  <Re_TF_e2s>  <Im_TF_e2s>')
+np.savetxt('ForceTransmitFunction_real-and-imaginary_parts.txt', list(zip(fs, TF_s2e.real, TF_s2e.imag, TF_e2s.real, TF_e2s.imag)), fmt='%.12f', header='<Freq.(1/ps)>  <Re_TF_s2e>  <Im_TF_s2e>  <Re_TF_e2s>  <Im_TF_e2s>')
 
 ### Mod of the complex transmit function
 # Note that "mod" misses though the linear property, and hence the non-additivity of different transmission modes!!! 
